@@ -1,0 +1,22 @@
+{% extends 'index/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Cadastrar{% endblock %}
+
+{% block content %}
+    
+<div class="mt-5">
+    <div class=" offset-md-4 col-md-4 ">     
+        <div class="card auth-card">
+            <div class="card-body">
+                <h4 class="card-title text-center">Cadastrar</h4>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button type="submit" class="btn btn-primary btn-block">Registrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

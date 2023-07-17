@@ -1,0 +1,12 @@
+{% extends 'index/base.html' %}
+{% load static %}
+{% block title %}Sucesso! 🎉{% endblock %}
+
+{% block content %}
+    
+    <div class="mt-5 text-center">
+        <h1 class="display-5">Bem-vindo {{ user.get_username }}! 🎉</h1>
+        <h2 class="display-6">Login realizado com sucesso.</h2>
+    </div>
+                
+{% endblock %}
